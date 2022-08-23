@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #6A6972;
+  overflow-x: hidden; }
+
 * {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
 }
 
-header {
+/* header {
     background-color: rgb(216, 223, 230);
     width: 100%;
     position: fixed;
@@ -17,7 +22,7 @@ header {
     align-items: center;
     padding: 10px 200px;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-}
+} */
 
 .logo {
     text-decoration: none;
@@ -27,7 +32,14 @@ header {
     font-size: 1.8em;
 }
 
-.navigation a {
+/* .navbar {
+    padding: 25px 0;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease-out 0s; 
+}
+
+.navbar a {
     color: hsl(263, 87%, 39%);
     text-decoration: none;
     font-size: 1.1em;
@@ -37,68 +49,225 @@ header {
     transition: all .2s linear;
 }
 
-.navigation a:hover,
-.navigation a.active {
+.navbar a:hover,
+.navbar a.active {
     color: #fff;
     background: #784ddd;
 }
+*/
+
+.navbar-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s ease-out 0s; 
+}
+
+.sticky {
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-out 0s; 
+}
+  
+.sticky .navbar {
+  padding: 8px 0; 
+}
+
+.navbar {
+  padding: 25px 0;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease-out 0s;
+}
+  
+.navbar-brand {
+    padding: 0;
+    position: relative;
+}
+
+.navbar-brand span{
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  padding-left: 2px;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'League Spartan', sans-serif;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.sticky span {
+    color: black;
+}
+
+.sticky span samp{
+    color: #07ee84;
+}
+ 
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 45px;
+  position: relative; }
+  
+.navbar-nav .nav-item a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.3s ease-out 0s;
+  padding: 10px 0;
+  position: relative;
+  font-family: "Poppins", sans-serif; 
+}
+     
+.navbar-nav .nav-item:hover .sub-menu {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+    
+    
+.navbar-nav .nav-item .sub-menu {
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 110%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out 0s; 
+}
+    
+    
+.navbar-nav .nav-item .sub-menu li {
+  display: block;
+}
+
+.navbar-nav .nav-item .sub-menu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #2E2E2E; 
+}
+
+.navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
+  padding-left: 25px;
+  color: #006eb6; 
+}
+  
+.navbar-nav .sub-nav-toggler {
+  display: none; }
+  
+.navbar-nav .sub-nav-toggler span {
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #2E2E2E;
+    border-bottom: 1px solid #2E2E2E;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -5px; }
+.btn-1 {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 48px;
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.4s ease-out 0s;
+  background: linear-gradient(to right, #006eb6 0%, #006eb6 50%, #ffa750 50%);
+  background-size: 220%;
+}
+
+.navbar-btn .btn-1 {
+  height: 45px;
+  line-height: 45px;
+  background: linear-gradient(to right, #ffa750 0%, #ffa750 50%, #006eb6 50%);
+  background-size: 200%; 
+}
+
+.navbar-btn .btn-1:hover {
+  color: #fff;
+  background-position: right center; 
+}
+
+.sticky .navbar-toggler .toggler-icon {
+  background-color: #2E2E2E; 
+}
+
+.sticky .navbar-nav .nav-item a {
+  color: #2E2E2E; 
+}
+
+.sticky .navbar-nav .nav-item.active > a, .sticky .navbar-nav .nav-item:hover > a {
+  color: #006eb6; 
+}
 
 section {
-    padding: 100px 150px;
+  padding: 100px 150px;
 }
 
 .main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url(images/background-top.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(images/background-top.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .main h2 {
-    color: #fff;
-    font-size: 1.6em;
-    font-weight: 600;
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
 .main h2 span {
-    display: inline-block;
-    margin-top: 20px;
-    color: bisque;
-    font-size: 3em;
-    font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+  color: bisque;
+  font-size: 3em;
+  font-weight: 700;
 }
 
 .main h3 {
-    color: #eee;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+  color: #eee;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.main-btn {
-    color: #fff;
-    background-color: #601cfc;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 700;
-    display: inline-block;
-    padding: 1em 2.2em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    transition: 0.7s ease;
-}
-
-.main-btn:hover {
-    background-color: #784ddd;
-    transform: scale(1.1);
-}
+.main .btn-1 {
+    height: 45px;
+    line-height: 45px;
+    background: linear-gradient(to right, #006eb6 0%, #006eb6 50%, bisque 50%);
+    background-size: 200%; 
+  }
+  
+  .main .btn-1:hover {
+    color: black;
+    background-position: right center; 
+  }
 
 .social-icon a {
     color: #fff;
