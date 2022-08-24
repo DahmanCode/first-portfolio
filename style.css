@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: normal;
@@ -12,18 +13,6 @@ body {
   box-sizing: border-box; 
 }
 
-/* header {
-    background-color: rgb(216, 223, 230);
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 200px;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-} */
-
 .logo {
     text-decoration: none;
     color: hsl(271, 87%, 39%);
@@ -31,30 +20,6 @@ body {
     font-weight: 700;
     font-size: 1.8em;
 }
-
-/* .navbar {
-    padding: 25px 0;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease-out 0s; 
-}
-
-.navbar a {
-    color: hsl(263, 87%, 39%);
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 400;
-    border-radius: .5em;
-    padding: .4em .8em;
-    transition: all .2s linear;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #fff;
-    background: #784ddd;
-}
-*/
 
 .navbar-area {
   position: absolute;
@@ -68,7 +33,7 @@ body {
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-out 0s; 
 }
@@ -191,14 +156,14 @@ body {
   cursor: pointer;
   z-index: 5;
   transition: all 0.4s ease-out 0s;
-  background: linear-gradient(to right, #006eb6 0%, #006eb6 50%, #ffa750 50%);
+  background: linear-gradient(to right, #efde00 0%, #efde00 50%, #27ec7c 50%);
   background-size: 220%;
 }
 
 .navbar-btn .btn-1 {
   height: 45px;
   line-height: 45px;
-  background: linear-gradient(to right, #ffa750 0%, #ffa750 50%, #006eb6 50%);
+  background: linear-gradient(to right, #27ec7c 0%, #27ec7c 50%, #ecec0a 50%);
   background-size: 200%; 
 }
 
@@ -257,15 +222,19 @@ section {
   margin-bottom: 40px;
 }
 
+.main a {
+    text-decoration: none;
+}
+
 .main .btn-1 {
     height: 45px;
     line-height: 45px;
-    background: linear-gradient(to right, #006eb6 0%, #006eb6 50%, bisque 50%);
+    background: linear-gradient(to right, #006eb6 0%, #006eb6 50%, #27ec7c 50%);
     background-size: 200%; 
   }
   
   .main .btn-1:hover {
-    color: black;
+    color: #fff;
     background-position: right center; 
   }
 
