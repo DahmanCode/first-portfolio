@@ -54,7 +54,7 @@ body {
     position: relative;
 }
 
-.navbar-brand span{
+/* .navbar-brand span{
   position: absolute;
   top: 0%;
   left: 100%;
@@ -73,7 +73,7 @@ body {
 
 .sticky span samp{
     color: #07ee84;
-}
+} */
  
 .navbar-nav {
   flex-direction: row;
