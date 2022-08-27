@@ -7,7 +7,7 @@ body {
   color: #6A6972;
   overflow-x: hidden; }
 
-* {
+*, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
@@ -128,17 +128,6 @@ body {
   color: #006eb6; 
 }
   
-.navbar-nav .sub-nav-toggler {
-  display: none; }
-  
-.navbar-nav .sub-nav-toggler span {
-    width: 8px;
-    height: 8px;
-    border-left: 1px solid #2E2E2E;
-    border-bottom: 1px solid #2E2E2E;
-    transform: rotate(-45deg);
-    position: relative;
-    top: -5px; }
 .btn-1 {
   display: inline-block;
   margin: 0.5rem 0;
@@ -193,7 +182,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(images/background-top.jpg) no-repeat;
+  background: url(/images/background-top.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -387,7 +376,7 @@ section {
 
 @media (max-width: 1023px) {
     header {
-        padding: 12px 20px;
+        padding: 0px 20px;
     }
     .navigation a {
         padding-left: 10px;
